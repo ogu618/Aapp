@@ -1,5 +1,6 @@
 package jp.ac.meijou.android.s241205045;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -10,12 +11,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.datastore.preferences.rxjava3.RxPreferenceDataStoreBuilder;
+import androidx.datastore.rxjava3.RxDataStore;
+
+import java.util.prefs.Preferences;
 
 import jp.ac.meijou.android.s241205045.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
+    private PrefDataStore prefDataStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,8 +69,17 @@ public class MainActivity extends AppCompatActivity {
         binding.text.setText(R.string.sample_text);
 
 
+//day2 p.53
+    prefDataStore = prefDataStore.getInstance(this);
+    //day2 p.57
+    prefDataStore.getString("name").ifPresent(name -> binding.text.setText(name));
 
+    binding.button.setOnClickListener(view -> {
+        var saveText = binding.editTextText.getText().toString();
+        prefDataStore.setString("name", saveText);
+    });
 
 
     }
 }
+
