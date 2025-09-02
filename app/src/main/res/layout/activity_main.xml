@@ -38,9 +38,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
         android:layout_marginTop="144dp"
+        android:layout_marginEnd="102dp"
+        android:layout_marginBottom="22dp"
         android:ems="10"
         android:inputType="text"
         android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -62,8 +66,15 @@
         android:id="@+id/textView"
         android:layout_width="152dp"
         android:layout_height="42dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="183dp"
+        android:layout_marginBottom="68dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="76dp"
-        tools:layout_editor_absoluteY="34dp" />
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
