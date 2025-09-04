@@ -44,4 +44,8 @@ dependencies {
     androidTestImplementation libs.espresso.core
     implementation libs.datastore.preferences
     implementation libs.datastore.preferences.rxjava3
+//day4
+    implementation libs.okhttp
+    implementation libs.moshi
+
 }
