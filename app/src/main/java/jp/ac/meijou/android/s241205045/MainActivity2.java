@@ -3,6 +3,7 @@ package jp.ac.meijou.android.s241205045;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 
 import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResultLauncher;
@@ -75,9 +76,14 @@ public class MainActivity2 extends AppCompatActivity {
         //暗黙的
         binding.button4.setOnClickListener((view -> {
             var intent = new Intent();
-            intent.setAction(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("https://www.yahoo.co.jp"));
+//            intent.setAction(Intent.ACTION_VIEW);
+//            intent.setData(Uri.parse("https://www.yahoo.co.jp"));
+//            startActivity(intent);
+
+            intent = new Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA);
             startActivity(intent);
+
+
         }));
 
     //send button 演習その2
