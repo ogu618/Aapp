@@ -70,7 +70,7 @@ public class MainActivity8 extends AppCompatActivity {
 
     private void classifyImage() {
         // Drawable から画像を取得（例：sample_image が res/drawable にある）
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.baseline_brightness_5_24);
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.cat_image);
 
         // Bitmap を TensorImage に変換
         TensorImage image = TensorImage.fromBitmap(bitmap);
