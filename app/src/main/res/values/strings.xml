@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">モバイルアプリA</string>
     <string name="sample_text">てすと</string>
-    <string name="second_app_name">appからapppへ</string>
+    <string name="second_app_name">これはテストメッセージ</string>
 </resources>
